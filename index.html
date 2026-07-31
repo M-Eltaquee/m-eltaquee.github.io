@@ -232,8 +232,7 @@ main{
     <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">◐</button>
     <div class="side-photo"><img src="assets/img/photo_circle.png" alt="Mohamed Saleh"></div>
     <p class="side-name">Mohamed Saleh</p>
-    <p class="side-role">Commercial Analyst → Data Analyst</p>
-    <p class="side-desc">8+ years turning commercial data into decisions across telecom, chemical manufacturing, and luxury retail. Dubai, UAE.</p>
+    <p class="side-role">Data Analyst</p>
 
     <div class="side-socials">
       <a href="mailto:igs.meltaquee@gmail.com" aria-label="Email">@</a>
@@ -241,14 +240,6 @@ main{
       <a href="https://github.com/M-Eltaquee" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
       <a href="tel:+971557910109" aria-label="Phone">☎</a>
     </div>
-
-    <ul class="side-nav" id="sideNav">
-      <li class="active" data-target="about"><button><span class="idx">01</span>About</button></li>
-      <li data-target="experience"><button><span class="idx">02</span>Experience</button></li>
-      <li data-target="skills"><button><span class="idx">03</span>Skills</button></li>
-      <li data-target="projects"><button><span class="idx">04</span>Projects</button></li>
-      <li data-target="contact"><button><span class="idx">05</span>Contact</button></li>
-    </ul>
 
     <div class="side-spacer"></div>
     <a class="btn-cv" href="assets/Mohamed_Saleh_CV.pdf" target="_blank" rel="noopener">↓ Download Resume</a>
@@ -394,20 +385,16 @@ main{
 })();
 
 (function(){
-  const navItems = document.querySelectorAll('#sideNav li');
   const panels = document.querySelectorAll('.acc-item');
 
   function activate(name){
-    navItems.forEach(li => li.classList.toggle('active', li.dataset.target === name));
     panels.forEach(p => p.classList.toggle('active', p.dataset.panel === name));
     if(name === 'skills'){
       document.querySelectorAll('.meter-fill').forEach(f => { f.style.width = f.dataset.w + '%'; });
     }
   }
-  navItems.forEach(li => li.querySelector('button').addEventListener('click', () => activate(li.dataset.target)));
   panels.forEach(p => p.querySelector('.acc-head').addEventListener('click', () => activate(p.dataset.panel)));
 
-  // animate the default open panel's meters if it happens to be skills on load
   activate('about');
 })();
 </script>
