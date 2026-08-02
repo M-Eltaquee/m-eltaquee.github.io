@@ -199,6 +199,7 @@ main{
 .proj-status{ font-family:var(--mono); font-size:8.5px; text-transform:uppercase; padding:2px 7px; border-radius:20px; white-space:nowrap; height:fit-content; }
 .status-progress{ background:rgba(240,180,41,.15); color:#F0B429; }
 .status-soon{ background:var(--bg); color:var(--text-dim); border:1px solid var(--border); }
+.status-done{ background:var(--accent-glow); color:var(--accent); }
 .proj-desc{ font-size:.8rem; color:var(--text-dim); margin:0; }
 .proj-tools{ font-family:var(--mono); font-size:9.5px; color:var(--accent-2); }
 .proj-link{ font-family:var(--mono); font-size:10.5px; text-decoration:none; color:var(--text); border-bottom:1px solid var(--accent); align-self:flex-start; }
@@ -328,7 +329,13 @@ main{
       <div class="acc-body">
         <div class="proj-grid">
           <div class="proj-card">
-            <div class="proj-top"><p class="proj-title">Sales &amp; Customer Dashboard</p><span class="proj-status status-progress">In Progress</span></div>
+            <div class="proj-top"><p class="proj-title">Nightmare Data Model</p><span class="proj-status status-done">Completed</span></div>
+            <p class="proj-desc">Rebuilt a deliberately messy retail dataset, duplicate tables, split-year facts, unlabeled columns, into a clean star schema with a validation dashboard on top.</p>
+            <p class="proj-tools">Power BI · Power Query · DAX</p>
+            <a class="proj-link" href="https://github.com/M-Eltaquee/power-bi-nightmare-data-model" target="_blank" rel="noopener">View repo →</a>
+          </div>
+          <div class="proj-card">
+            <div class="proj-top"><p class="proj-title">Sales &amp; Customer Dashboard</p><span class="proj-status status-done">Completed</span></div>
             <p class="proj-desc">Tableau dashboard analyzing YoY sales, profit, and customer behavior across a retail network.</p>
             <p class="proj-tools">Tableau · Calculated Fields</p>
             <a class="proj-link" href="https://github.com/M-Eltaquee/tableau-sales-customer-dashboard" target="_blank" rel="noopener">View repo →</a>
